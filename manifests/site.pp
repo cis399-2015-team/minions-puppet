@@ -1,6 +1,6 @@
 # Lily's node
 node ip-10-0-9-201 {
-	include sshd
+
 }
 
 # Mustafa's node
