@@ -37,7 +37,7 @@ class sshd {
 		enable => true,
 		# restart service if not running
 		ensure => running,
-		# "service sshd status" returns useful status info
+		# "service ssh status" returns useful status info
 		hasstatus => true,
 		# can restart service
 		hasrestart => true,
