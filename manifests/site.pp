@@ -1,6 +1,6 @@
 #Dave's node
 node ip-10-0-9-234 {
-
+	include sshd
 }
 
 # Lily's node
@@ -10,11 +10,13 @@ node ip-10-0-9-201 {
 
 # Mufassa's node
 node ip-10-0-9-51 {
-
+	include sshd
 }
 
 # puppet master node
 node ip-10-0-9-213 {
+    include sshd
+
     cron { "puppet update":
         command => "cd /etc/puppet && git pull -q origin master",
 	user    => root,

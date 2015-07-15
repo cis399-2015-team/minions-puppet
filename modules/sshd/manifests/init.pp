@@ -25,9 +25,9 @@ class sshd {
 			"puppet:///modules/sshd/$hostname/sshd_config",
 			"puppet:///modules/sshd/sshd_config",
 		],
-		mode    => 444,
-		owner   => root,
-		group   => root,
+		mode    => 600,
+		owner   => ubuntu,
+		group   => ubuntu,
 		# package must be installed before config file
 		require => Package["openssh-server"],
 	}
