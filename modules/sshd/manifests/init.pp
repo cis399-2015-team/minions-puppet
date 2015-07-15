@@ -32,7 +32,7 @@ class sshd {
 
 	ssh_authorized_key { "dayv-key":
 		user => "ubuntu",
-		key => "AAAAB3NzaC1yc2EAAAADAQABAAABAQCDmAoT9TnX9XTOsdv0DwvvnPE+rjH09rjq1pAFfRkKKVkPOB7pUNssgquTUMyiBPE6DZM3u+afKX9qRNbHQEjTF1Sbp/kcpx9yzIfH6oMjlRqXhJog+DS096dr5pOE8/DtuU1x9BGRHJN4g2FIR+YzIvKOnctixDJS9V5Tvhkxzpl66HVhHOTU4i+ALh6Cit50GzA82jcIvVmjweHgAUDXtyXLvRco6k/EGFyFwEQDofgTdHhPqW/s1j2RyMx+PS3lEmUeNUM/eh9fddNZN99HfSPLf1C4wZoNeL5cbNdLAmz/AtQf0NhkVO9j7z0I2eZaoWa+Gau6nOUOB4fjM4vx"
+		key => "AAAAB3NzaC1yc2EAAAADAQABAAABAQCDmAoT9TnX9XTOsdv0DwvvnPE+rjH09rjq1pAFfRkKKVkPOB7pUNssgquTUMyiBPE6DZM3u+afKX9qRNbHQEjTF1Sbp/kcpx9yzIfH6oMjlRqXhJog+DS096dr5pOE8/DtuU1x9BGRHJN4g2FIR+YzIvKOnctixDJS9V5Tvhkxzpl66HVhHOTU4i+ALh6Cit50GzA82jcIvVmjweHgAUDXtyXLvRco6k/EGFyFwEQDofgTdHhPqW/s1j2RyMx+PS3lEmUeNUM/eh9fddNZN99HfSPLf1C4wZoNeL5cbNdLAmz/AtQf0NhkVO9j7z0I2eZaoWa+Gau6nOUOB4fjM4vx",
 	}
 
 	ssh_authorized_key { "Mufassa-key":
