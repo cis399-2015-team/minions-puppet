@@ -6,6 +6,7 @@ node ip-10-0-9-234 {
 # Lily's node
 node ip-10-0-9-201 {
 	include sshd
+	include web-server
 }
 
 # Mufassa's node
