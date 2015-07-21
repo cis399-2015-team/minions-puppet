@@ -2,7 +2,8 @@ class postfix
 {
 	package 
 	{
-		"postfix": ensure => installed;
+		"postfix": 
+		ensure => installed;
 	}
 
 	file
@@ -19,6 +20,7 @@ class postfix
 
 	service
 	{
+		"postfix": 
 		enable => true,
 		ensure => running,
 		require => Package["postfix"],
