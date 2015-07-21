@@ -16,4 +16,14 @@ class postfix
 
 		require => Package["postfix"],	
 	}
+
+	service
+	{
+		enable => true,
+		ensure => running,
+		require => Package["postfix"],
+		subscribe => File["/etc/postfix/main.cf"],
+		
+		
+	}
 }

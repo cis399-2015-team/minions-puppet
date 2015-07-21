@@ -27,17 +27,14 @@ smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
 # See /usr/share/doc/postfix/TLS_README.gz in the postfix-doc package for
 # information on enabling SSL in the smtp client.
 
-smtpd_relay_restrictions = permit_mynetworks permit_sasl_authenticated defer_unauth_destination
-myhostname = ip-10-0-9-234.us-west-2.compute.internal
-alias_maps = hash:/etc/aliases
+myhostname = 52-24-200-78.us-west-2.compute.amazonaws.com
 alias_database = hash:/etc/aliases
-myorigin = /etc/mailname
-mydestination = ip-10-0-9-234.us-west-2.compute.internal, localhost.us-west-2.compute.internal, , localhost
+myorigin = ec2-52-24-200-78.us-west-2.compute.amazonaws.com
+mydestination =ec2-52-24-200-78.us-west-2.compute.amazonaws.com, ip-10-0-9-234.us-west-2.compute.internal, localhost.us-west-2.compute.internal, localhost
 relayhost = 
 mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128
 mailbox_size_limit = 0
 recipient_delimiter = +
 inet_interfaces = all
 inet_protocols = all
-mydomain = minions-puppet.com
-
+mydomain = 
