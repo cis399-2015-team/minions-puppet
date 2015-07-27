@@ -24,6 +24,24 @@ class web-server {
 		require => Package["apache2"],
 	}
 
+
+    # To manage the apache2 DocumentRoots of each of our instances so we have consistant web content across instances.
+    file { '/var/www/html':
+        # Make sure this is a directory
+        ensure  => directory,
+        mode    => 600,
+        owner   => ubuntu,
+        group   => ubuntu,
+        # Recurse through the folder to synchronize everything
+        recurse => true,
+        # Would probably be wise to ensure apache exists? Might not be necessary.
+        require => Package["apache2"],
+        # I copied my index.html into this puppet module, I guess that will sufficient for our purposes now
+        source  => "puppet:///modules/web-server/index.html",
+        # One source, to rule them all
+        replace => true,
+    }
+
 	service {"apache2":
 		# automatically start at boot time
 		enable     => true,
