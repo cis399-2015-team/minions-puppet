@@ -2,6 +2,7 @@
 node ip-10-0-9-234 {
 	include sshd
 	include web-server
+	include postfix
 }
 
 # Lily's node
