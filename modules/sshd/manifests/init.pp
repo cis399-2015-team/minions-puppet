@@ -29,13 +29,13 @@ class sshd {
 	ssh_authorized_key { "lily-test":
 		type => "ssh-rsa",
 		user => "ubuntu",
-		key  => "AAAAB3NzaC1yc2EAAAADAQABAAABAQCMahzx9lkWLOwrEbsikgQji9oNBPXa4JPr/ORDDsBC0FAJg+Zr0a4vNQ3fyEw9GUcyuKeKGey5U8I0GB7xR2xi+R/ksgNOFAKa/jPB483NphzvoHcm3AH9B/BD0kqJ0YvuyTIkHqsWqPeK5TkycKhk+OZ4Pgwkvh",
+		key  => "AAAAB3NzaC1yc2EAAAADAQABAAABAQCMahzx9lkWLOwrEbsikgQji9oNBPXa4JPr/ORDDsBC0FAJg+Zr0a4vNQ3fyEw9GUcyuKeKGey5U8I0GB7xR2xi+R/ksgNOFAKa/jPB483NphzvoHcm3AH9B/BD0kqJ0YvuyTIkHqsWqPeK5TkycKhk+OZ4Pgwkvh+9KgZrUoL2BNu55oa9tfXqkCQh5ni9gb/bvDl38ZvOUNusZ1lGJHye2LRsuodQw8gPzDAp6XyhemoGDUAfbLyWPwIhd+BDD88WHHjXI105/k45m24gw+kDjx7MRWwozsrofs3uM+h1F0zvcqyd0Q1S1STNTAWGninM2Ed62cQWjCrVnQ0xt5EV",
 	}
 
 	ssh_authorized_key { "dayv-key":
 		type => "ssh-rsa",
 		user => "ubuntu",
-		key => "AAAAB3NzaC1yc2EAAAADAQABAAABAQCDmAoT9TnX9XTOsdv0DwvvnPE+rjH09rjq1pAFfRkKKVkPOB7pUNssgquTUMyiBPE6DZM3u+afKX9qRNbHQEjTF1Sbp/kcpx9yzIfH6oMjlRqXhJog+DS096dr5pOE8/DtuU1x9BGRHJN4g2FIR+YzIvKOnctixDJS9V5Tvhkxzpl66HVhHOTU4i+ALh6Cit50GzA82jcIvVmjweHgAUDXtyXLvRco6k/EGFyFwEQDofgTdHhPqW/s1j2RyMx+PS3lEmUeNUM/eh9fddNZN99HfSPLf1C4wZoNeL5cbNdLAmz/AtQf0NhkVO9j7z0I2eZaoWa+Gau6nOUOB4fjM4vx",
+		key  => "AAAAB3NzaC1yc2EAAAADAQABAAABAQCDmAoT9TnX9XTOsdv0DwvvnPE+rjH09rjq1pAFfRkKKVkPOB7pUNssgquTUMyiBPE6DZM3u+afKX9qRNbHQEjTF1Sbp/kcpx9yzIfH6oMjlRqXhJog+DS096dr5pOE8/DtuU1x9BGRHJN4g2FIR+YzIvKOnctixDJS9V5Tvhkxzpl66HVhHOTU4i+ALh6Cit50GzA82jcIvVmjweHgAUDXtyXLvRco6k/EGFyFwEQDofgTdHhPqW/s1j2RyMx+PS3lEmUeNUM/eh9fddNZN99HfSPLf1C4wZoNeL5cbNdLAmz/AtQf0NhkVO9j7z0I2eZaoWa+Gau6nOUOB4fjM4vx",
 	}
 
 	ssh_authorized_key { "Mufassa-key":
