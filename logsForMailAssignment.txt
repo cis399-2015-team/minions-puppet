@@ -1,0 +1,15 @@
+ubuntu@ip-10-0-9-234:/var/log$ grep 966DE41CBB /var/log/syslog
+Jul 28 23:29:06 ip-10-0-9-234 postfix/pickup[1140]: 966DE41CBB: uid=1000 from=<ubuntu@ec2-52-24-200-78.us-west-2.compute.amazonaws.com>
+Jul 28 23:29:06 ip-10-0-9-234 postfix/cleanup[12419]: 966DE41CBB: message-id=<alpine.DEB.2.10.1507282328500.11849@ip-10-0-9-234.us-west-2.compute.internal>
+Jul 28 23:29:06 ip-10-0-9-234 postfix/qmgr[1141]: 966DE41CBB: from=<ubuntu@ec2-52-24-200-78.us-west-2.compute.amazonaws.com>, size=2635, nrcpt=1 (queue active)
+Jul 28 23:29:12 ip-10-0-9-234 postfix/smtp[12422]: 966DE41CBB: to=<stevev@hexadecimal.uoregon.edu>, relay=hexadecimal.uoregon.edu[128.223.142.97]:25, delay=6.3, delays=0.01/0/6.1/0.18, dsn=2.0.0, status=sent (250 2.0.0 t6SNTBMb019785 Message accepted for delivery)
+Jul 28 23:29:12 ip-10-0-9-234 postfix/qmgr[1141]: 966DE41CBB: removed
+
+ubuntu@ip-10-0-9-234:/var/log$ grep 5593441C35 /var/log/syslog
+Jul 28 23:25:56 ip-10-0-9-234 postfix/smtpd[12397]: 5593441C35: client=hexadecimal.uoregon.edu[128.223.142.97]
+Jul 28 23:25:56 ip-10-0-9-234 postfix/cleanup[12402]: 5593441C35: message-id=<21944.3971.701417.350900@hexadecimal.uoregon.edu>
+Jul 28 23:25:56 ip-10-0-9-234 postfix/qmgr[1141]: 5593441C35: from=<stevev@hexadecimal.uoregon.edu>, size=2595, nrcpt=1 (queue active)
+Jul 28 23:25:56 ip-10-0-9-234 postfix/local[12403]: 5593441C35: to=<ubuntu@ec2-52-24-200-78.us-west-2.compute.amazonaws.com>, relay=local, delay=0.05, delays=0.05/0/0/0, dsn=2.0.0, status=sent (delivered to mailbox)
+Jul 28 23:25:56 ip-10-0-9-234 postfix/qmgr[1141]: 5593441C35: removed
+
+
