@@ -30,7 +30,7 @@ class web-server {
 		source => "puppet:///modules/web-server/html",
         # Make sure this is a directory
         ensure  => directory,
-        mode    => 600,
+        mode    => 644,
         owner   => ubuntu,
         group   => ubuntu,
         # Recurse through the folder to synchronize everything
