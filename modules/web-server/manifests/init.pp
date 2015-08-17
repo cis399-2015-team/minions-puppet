@@ -1,6 +1,7 @@
 # == Class: web-server
 #
 # Puppet management of apache2 http server version 2.4
+#          & php5 with apache2 integration 
 #
 # == Authors
 # CiS 399, 2015, Team Minions
@@ -9,7 +10,24 @@
 
 class web-server {
     package {
-		"apache2": ensure => installed;		
+		"apache2": ensure => installed;
+		"php5": ensure => installed;
+		"libapache2-mod-php5": ensure => installed;		
+	}
+	
+	# To manage the configuration of php5 across instances
+	file { '/etc/php5/apache2/conf.d':
+		source => [
+			"puppet:///modules/web-server/$hostname/php-config",
+			"puppet:///modules/web-server/php-config",
+		],
+		ensure => directory,
+		mode => 644,
+		owner => ubuntu,
+		group => ubuntu,
+		recurse => true,
+		require => Package["php5"],
+		replace => true,
 	}
 
 	file { "/etc/apache2/apache2.conf":
@@ -23,7 +41,6 @@ class web-server {
 		# package must be installed before config file
 		require => Package["apache2"],
 	}
-
 
     # To manage the apache2 DocumentRoots of each of our instances so we have consistant web content across instances.
     file { '/var/www/html':
@@ -56,4 +73,13 @@ class web-server {
 		# if you change the configuration, cause service to restart
 		subscribe  => File["/etc/apache2/apache2.conf"],
 	}
+
+	service {"php5":
+		enable => true,
+		ensure => running,
+		hasstatus => true,
+		hasrestart => true,
+		require => [ Package["php5"],
+					File["/etc/php5/apache2/conf.d"] ],
+		subscribe => File["/etc/php5/apache2/conf.d"],
 }
