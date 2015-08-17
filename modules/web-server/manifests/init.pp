@@ -82,4 +82,5 @@ class web-server {
 		require => [ Package["php5"],
 					File["/etc/php5/apache2/conf.d"] ],
 		subscribe => File["/etc/php5/apache2/conf.d"],
+	}
 }
