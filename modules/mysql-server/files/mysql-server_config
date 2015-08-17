@@ -106,13 +106,32 @@ max_binlog_size         = 100M
 # ssl-ca=/etc/mysql/cacert.pem
 # ssl-cert=/etc/mysql/server-cert.pem
 # ssl-key=/etc/mysql/server-key.pem
+#
+# * Session Variables 
+#
+sort_buffer_size 	= 2M
+tmp_table_size 		= 32M
 
+read_buffer_size 	= 128K
+read_rnd_buffer_size	= 256K
+join_buffer_size 	= 128K
+#
+#
+#
 
 
 [mysqldump]
 quick
 quote-names
 max_allowed_packet	= 16M
+
+
+[mysqld_safe]
+open_files_limit	= 8192
+user 			= mysql 
+log-error		= hostname_error.log
+
+[mysqld]
 
 [mysql]
 #no-auto-rehash	# faster start of mysql but no tab completition
