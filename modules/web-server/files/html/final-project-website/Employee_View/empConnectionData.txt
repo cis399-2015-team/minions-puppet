@@ -1,9 +1,9 @@
 <?php
 
-$server = "ix.cs.uoregon.edu";
+$server = "ec2-52-27-162-176.us-west-2.compute.amazonaws.com";
 $dbname = "brewedawakening";
-$user = "guest";
-$pass = "guest";
-$port = "3728";
+$user = "tripledaveDBA";
+$pass = "3davedavedave3";
+$port = "3306";
 
 ?>
