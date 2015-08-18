@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<?php
+    $db = mysqli_connect('mysql-server','Minions','password','minionsdatabase');
+?>
+
+<html>
+
+<head> 
+<h1> About our company <h1> 
+</head>
+
+<body> 
+<?php
+                $query = "SELECT * FROM `mytable`;";
+                $result = mysqli_query($db, $query);
+                while($row = mysqli_fetch_assoc($result)) {
+                      // Display your datas on the page
+                }
+?>
+<p>We made this database interface to be user/employee friendly where you can add/update/look-up new employees. <br>
+you could also look-up previous customers from the database that we provided using MySql</p><br> 
+
+<a href="home.html">Back to Home</a>
+<br>
+____________________________________
+This is Minions Coffee Webpage that is connected to Minions MySQL server
+</body>
+</html>

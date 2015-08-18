@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<?php
+    $db = mysqli_connect('mysql-server','Minions','password','minionsdatabase');
+?>
+
+<html> 
+<head>
+	<title>Minions Coffee Shop</title>
+</head>
+<body> 
+<?php
+                $query = "SELECT * FROM `mytable`;";
+                $result = mysqli_query($db, $query);
+                while($row = mysqli_fetch_assoc($result)) {
+                      // Display your datas on the page
+                }
+?>
+	<h2> Our Awesome Menu </h2>
+	<ul> 
+		<h3> Coffee & tea </h3> 
+		<li> Latte </li>
+		<li> Espresso </li> 
+		<li> Cappuccino </li> 
+		<li> Mocha </li>
+		<li> Organic Tea </li>
+		<li> Chai Lattee </li> 
+		<br> 
+		<h3> Bagels & Sandwiches </h3> 
+		<li> Cheese Bagel </li> 
+		<li> Turkey Bagel </li> 
+		<li> Green Bagel </li> 
+		<li> Protein Bagel </li> 
+		<li> Tuna Sandwich </li>
+		<li> Turkey & Ham Sandwich </li> 
+		<li> Minions Special Sandwich (For heat lovers) </li> 
+		<h3> Pastry </h3> 
+		<li> Croissants </li>
+		<li> Cookies </li> 
+		<li> Muffins (Blueberry, Raspberry, and more </li> 
+		<li> Pizza </li> 
+		<li> Flat-bread </li> 
+	</ul> 
+	
+<a href="home.html">Back to Home</a>
+<br>
+____________________________________
+This is Minions Coffee Webpage that is connected to Minions MySQL server
+</body>
+</html>
+
+
+

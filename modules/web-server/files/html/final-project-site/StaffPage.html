@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<?php
+    $db = mysqli_connect('mysql-server','Minions','password','minionsdatabase');
+?>
+
+<html> 
+<head> 
+	<title> Minions Coffee Shop </title> 
+	
+</head> 
+<body> 
+<?php
+                $query = "SELECT * FROM `mytable`;";
+                $result = mysqli_query($db, $query);
+                while($row = mysqli_fetch_assoc($result)) {
+                      // Display your datas on the page
+                }
+?>
+
+<h2> Add new employee </h2> 
+
+
+<form action="form.asp">
+First name: <input type="text" name="FirstName" value="Employee first-name"><br>
+Last name: <input type="text" name="LastName" value="Employee last-name"><br>
+SSN: <input type="text" name="SSN" value="SSN"></br> 
+Experience: <input type="text" value="Your Experience"></br>
+Education: <input type="text" value="Completed Education"></br>
+<input type="submit" value="Submit">
+</form>
+
+<h2> Look-up an Employee </h2>
+<form action="form.asp">
+Employee Full name: <input type="text" name="FirstName" value="Employee Name"><br>
+<input type="submit" value="Submit">
+</form>
+
+<h2> Update Employee shift schedule </h2>
+<form action="form.asp">
+Name: <input type="text" name="FirstName" value="Employee first-name"><br>
+Employee ID number: <input type="text" name="IDnumber" value="Employee ID number"><br>
+Shift start date: <input type="text" name="Start-date" value="Start date"><br>
+Shift end date: <input type="text" name="End-date" value="End date"><br>
+Length of shift: <input type="text" name="lengt of shif" value="length-shift"><br>
+<input type="submit" value="update">
+</form>
+
+
+<h3> If you hit submit these information will uploaded to our SQL database and all the information will be saved, and updated<h3>
+For your information: Access to SQL database will only be permitted to the owners of Minions Coffee Shop 
+
+<br>
+<a href="home.html">Back to Home</a>
+<br>
+____________________________________
+This is Minions Coffee Webpage that is connected to Minions MySQL server
+</body>
+</html>

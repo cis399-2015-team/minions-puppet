@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<?php
+    $db = mysqli_connect('mysql-server','Minions','password','minionsdatabase');
+?>
+
+
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    
+    <title>Minions Coffee database</title>
+</head>
+<body>
+
+<?php
+                $query = "SELECT * FROM `mytable`;";
+                $result = mysqli_query($db, $query);
+                while($row = mysqli_fetch_assoc($result)) {
+                      // Display your datas on the page
+                }
+?>
+
+<h1> Welcome to our minions database </h1>
+
+This project was designed by team Minions for CIS399 <br> 
+<br>
+<a href="AboutPage.html" >About</a> 
+<a href="StaffPage.html" >Staff</a> 
+<a href="Menu.html">Menu</a>
+
+<h2> Staff Sign in</h2>
+<form action="form.asp">
+USERNAME: <input type="text" name="UserName" value="UserName"><br>
+PASSWORD: <input type="text" name="Password" value="Password"><br>
+<br> 
+<input type="submit" value="Submit">
+</form>
+
+<br>
+____________________________________
+This is Minions Coffee Webpage that is connected to Minions MySQL server
+</body>
+</html>
