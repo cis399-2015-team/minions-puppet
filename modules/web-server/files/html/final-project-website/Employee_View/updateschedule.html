@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <!-- Latest compiled and minified CSS for bootstrap from Max CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <!-- Link to my own stylesheet -->
+    <link rel="stylesheet" type="text/css" href="employeeview.css">
+    <meta charset="UTF-8">
+    <title>Update Schedule</title>
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <ul class="nav nav-pills">
+            <li role="presentation"><a href="employeehome.html">Home</a></li>
+            <li role="presentation"><a href="viewschedule.php">View Current Schedule</a></li>
+            <li role="presentation" class="active"><a href="updateschedule.html">Update Schedule</a></li>
+            <li role="presentation"><a href="newemployee.html">Add a New Employee</a></li>
+            <li role="presentation"><a href="viewinventories.php">View Store & Online Inventories</a></li>
+            <li role="presentation"><a href="updatestore.html">Update Inventory</a></li>
+        </ul>
+    </div>
+</nav>
+<h2>Update Employee Schedule</h2>
+<p>
+<form action="updateschedule.php" method="POST" id="formy">
+    <pre>
+    SSN of the Employee: <input type="text" name="ssn" placeholder="ssn" required><br>
+    Shift to Change to:  <input type="text" name="shift" placeholder="shift#" required><br>
+    <input type="submit" value="submit"><input type="reset" value="reset">
+    </pre>
+</form>
+</p>
+
+</body>
+</html>

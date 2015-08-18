@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <!-- Latest compiled and minified CSS for bootstrap from Max CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <!-- Link to my own stylesheet -->
+    <link rel="stylesheet" type="text/css" href="employeeview.css">
+    <meta charset="UTF-8">
+    <title>Add an Employee</title>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <ul class="nav nav-pills">
+            <li role="presentation"><a href="employeehome.html">Home</a></li>
+            <li role="presentation"><a href="viewschedule.php">View Current Schedule</a></li>
+            <li role="presentation"><a href="updateschedule.html">Update Schedule</a></li>
+            <li role="presentation" class="active"><a href="newemployee.html">Add a New Employee</a></li>
+            <li role="presentation"><a href="viewinventories.php">View Store & Online Inventories</a></li>
+            <li role="presentation"><a href="updatestore.html">Update Inventory</a></li>
+        </ul>
+    </div>
+</nav>
+<center><h2>Add an Employee</h2></center>
+<p>This Adds an Employee to the employees Table</p>
+<form action="newemployee.php" method="POST">
+    <pre>
+    SSN of the New Employee: <input type="text" name="ssn" placeholder="ssn" required><br>
+    Their First Name:        <input type="text" name="fname" placeholder="first name" required><br>
+    Their Last Name:         <input type="text" name="lname" placeholder="last name" required><br>
+    Their Shift #:           <input type="text" name="shiftid" placeholder="shift#" required><br>
+    </pre>
+    <input type="submit" value="submit">
+    <input type="reset" value="reset">
+</form>
+<br>
+<br>
+<br>
+<center><h2>Add a Manager</h2></center>
+<p>This Adds a Manager to both the employees and managers Tables</p>
+<form action="newmanager.php" method="POST">
+    <pre>
+    Please input<br>
+    SSN of the New Manager: <input type="text" name="mssn" placeholder="ssn" required><br>
+    Their First Name:       <input type="text" name="mfname" placeholder="first name" required><br>
+    Their Last Name:        <input type="text" name="mlname" placeholder="last name" required><br>
+    Their Shift #:          <input type="text" name="mshiftid" placeholder="shift#" required><br>
+    </pre>
+    <input type="submit" value="submit">
+    <input type="reset" value="reset">
+</form>
+<br>
+<br>
+</body>
+</html>

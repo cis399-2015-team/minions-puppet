@@ -1,0 +1,9 @@
+<?php
+
+$server = "ec2-52-27-162-176.us-west-2.compute.amazonaws.com";
+$dbname = "brewedawakening";
+$user = "bestguest";
+$pass = "UNICORNdust111";
+$port = "3306";
+
+?>
