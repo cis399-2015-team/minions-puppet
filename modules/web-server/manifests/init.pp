@@ -12,7 +12,9 @@ class web-server {
     package {
 		"apache2": ensure => installed;
 		"php5": ensure => installed;
+		"php5-mysql": ensure => installed;
 		"libapache2-mod-php5": ensure => installed;		
+		"libapache2-mod-auth-mysql": ensure => installed;
 	}
 	
 	# To manage the configuration of php5 across instances

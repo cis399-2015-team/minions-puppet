@@ -10,6 +10,7 @@
 class mysql-server {
     package {
 		"mysql-server": ensure => installed;		
+		"phpmyadmin": ensure => installed;
 	}
 
 	file { "/etc/mysql/my.cnf":
